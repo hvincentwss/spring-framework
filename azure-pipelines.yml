@@ -96,11 +96,11 @@ steps:
       gradle.resolveDependencies=true
       gradle.runAssembleCommand=true
       gradle.aggregateModules=true
-      gradle.preferredEnvironment=gradle
+      #gradle.preferredEnvironment=gradle
       gradle.downloadMissingDependencies=true
       gradle.runPreStep=true
       gradle.ignoreSourceFiles=false
-      gradle.preferredEnvironment=gradle
+      #gradle.preferredEnvironment=gradle
       gradle.innerModulesAsDependencies=true
       archiveExtractionDepth=10
       archiveIncludes=**/*.war **/*.ear **/*.zip **/*.gzip **/*.tar.bz2 **/*.tar.gz **/*.tgz **/*.tar
