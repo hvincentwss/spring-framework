@@ -21,7 +21,7 @@ steps:
 - task: WhiteSource@21
   inputs:
     cwd: '$(System.DefaultWorkingDirectory)'
-    projectName: 'springext'
+    projectName: 'springext2'
     configuration: |
       # vi: ft=config
       ###############################################################
