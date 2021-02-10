@@ -24,4 +24,20 @@ steps:
 - task: WhiteSource@21
   inputs:
     cwd: '$(System.DefaultWorkingDirectory)'
-    projectName: 'testazdo'
+    projectName: 'test33'
+    configuration: |
+      wss.url=https://saas.whitesourcesoftware.com/agent
+      includes=**/*.*
+      resolveAllDependencies=true
+      gradle.resolveDependencies=true
+      gradle.runAssembleCommand=true
+      gradle.aggregateModules=true
+      gradle.preferredEnvironment=gradle
+      gradle.downloadMissingDependencies=true
+      gradle.runPreStep=true
+      gradle.ignoreSourceFiles=false
+      gradle.preferredEnvironment=gradle
+      gradle.innerModulesAsDependencies=true
+      archiveExtractionDepth=10
+      archiveIncludes=**/*.war **/*.ear **/*.zip **/*.gzip **/*.tar.bz2 **/*.tar.gz **/*.tgz **/*.tar
+      #archiveExcludes=**/*sources.jar
