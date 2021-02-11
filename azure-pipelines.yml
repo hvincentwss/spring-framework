@@ -1,0 +1,39 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: Gradle@2
+  inputs:
+    gradleWrapperFile: 'gradlew'
+    tasks: 'build'
+    publishJUnitResults: true
+    testResultsFiles: '**/TEST-*.xml'
+    javaHomeOption: 'JDKVersion'
+    sonarQubeRunAnalysis: false
+- task: WhiteSource@21
+  inputs:
+    cwd: '$(System.DefaultWorkingDirectory)'
+    projectName: 'tessstttt'
+    configuration: |
+      includes=**/*.*
+      resolveAllDependencies=true
+      gradle.resolveDependencies=true
+      gradle.runAssembleCommand=true
+      gradle.aggregateModules=true
+      gradle.preferredEnvironment=gradle
+      gradle.downloadMissingDependencies=true
+      gradle.runPreStep=true
+      gradle.ignoreSourceFiles=false
+      gradle.preferredEnvironment=gradle
+      gradle.innerModulesAsDependencies=true
+      archiveExtractionDepth=10
+      archiveIncludes=**/*.war **/*.ear **/*.zip **/*.gzip **/*.tar.bz2 **/*.tar.gz **/*.tgz **/*.tar
+      #archiveExcludes=**/*sources.jar
