@@ -29,14 +29,15 @@ steps:
       wss.url=https://saas.whitesourcesoftware.com/agent
       includes=**/*.*
       resolveAllDependencies=true
+      ignoreSourceFiles=false
       gradle.resolveDependencies=true
       gradle.runAssembleCommand=true
       gradle.aggregateModules=true
-      gradle.preferredEnvironment=gradlew
+      gradle.preferredEnvironment=gradle
       gradle.downloadMissingDependencies=true
       gradle.runPreStep=true
       gradle.ignoreSourceFiles=false
-      gradle.preferredEnvironment=gradlew
+      gradle.preferredEnvironment=gradle
       gradle.innerModulesAsDependencies=true
       archiveExtractionDepth=10
       archiveIncludes=**/*.war **/*.ear **/*.zip **/*.gzip **/*.tar.bz2 **/*.tar.gz **/*.tgz **/*.tar
