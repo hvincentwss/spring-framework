@@ -24,7 +24,7 @@ steps:
 - task: WhiteSource@21
   inputs:
     cwd: '$(System.DefaultWorkingDirectory)'
-    projectName: 'test33'
+    projectName: 'test33two'
     configuration: |
       wss.url=https://saas.whitesourcesoftware.com/agent
       includes=**/*.*
@@ -32,11 +32,11 @@ steps:
       gradle.resolveDependencies=true
       gradle.runAssembleCommand=true
       gradle.aggregateModules=true
-      gradle.preferredEnvironment=gradle
+      gradle.preferredEnvironment=gradlew
       gradle.downloadMissingDependencies=true
       gradle.runPreStep=true
       gradle.ignoreSourceFiles=false
-      gradle.preferredEnvironment=gradle
+      gradle.preferredEnvironment=gradlew
       gradle.innerModulesAsDependencies=true
       archiveExtractionDepth=10
       archiveIncludes=**/*.war **/*.ear **/*.zip **/*.gzip **/*.tar.bz2 **/*.tar.gz **/*.tgz **/*.tar
