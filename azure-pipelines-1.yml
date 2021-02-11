@@ -24,12 +24,11 @@ steps:
 - task: WhiteSource@21
   inputs:
     cwd: '$(System.DefaultWorkingDirectory)'
-    projectName: 'test33two'
+    projectName: 'testtttt50'
     configuration: |
-      wss.url=https://saas.whitesourcesoftware.com/agent
       includes=**/*.*
-      resolveAllDependencies=true
       ignoreSourceFiles=false
+      resolveAllDependencies=true
       gradle.resolveDependencies=true
       gradle.runAssembleCommand=true
       gradle.aggregateModules=true
